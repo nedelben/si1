@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقارنة شركات الشحن - أفضل حلول التوصيل</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shipping-fast"></i> مقارنة شركات الشحن</h1>
+            <p>ابحث عن أفضل حلول التوصيل بين مزودي الخدمات المختلفة</p>
+        </header>
+
+        <main>
+            <section class="comparison-form">
+                <h2>أدخل تفاصيل الشحنة</h2>
+                <form id="shippingForm">
+                    <!-- 1. Location -->
+                    <div class="form-group">
+                        <label for="origin">🗺️ من:</label>
+                        <input type="text" id="origin" placeholder="الولاية/البلدية/الحي" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="destination">إلى:</label>
+                        <input type="text" id="destination" placeholder="الولاية/البلدية/الحي" required>
+                    </div>
+                    
+                    <!-- 2. Package Type -->
+                    <div class="form-group">
+                        <label for="packageType">📦 نوع الطرد:</label>
+                        <select id="packageType" required>
+                            <option value="" disabled selected>اختر نوع الطرد</option>
+                            <option value="documents">وثائق</option>
+                            <option value="clothes">ملابس</option>
+                            <option value="electronics">إلكترونيات</option>
+                            <option value="large">طرود كبيرة</option>
+                            <option value="food">طعام</option>
+                            <option value="medicine">دواء</option>
+                            <option value="other">أخرى</option>
+                        </select>
+                    </div>
+                    
+                    <!-- 3. Weight -->
+                    <div class="form-group">
+                        <label for="weight">⚖️ الوزن:</label>
+                        <select id="weight" required>
+                            <option value="0.5">أقل من 1 كغ</option>
+                            <option value="3">1–5 كغ</option>
+                            <option value="7.5">5–10 كغ</option>
+                            <option value="15">أكثر من 10 كغ</option>
+                            <option value="unknown">لا أعرف</option>
+                        </select>
+                    </div>
+                    
+                    <!-- 4. Urgency -->
+                    <div class="form-group">
+                        <label for="urgency">⏱️ الاستعجال:</label>
+                        <select id="urgency" required>
+                            <option value="normal">عادي (3–5 أيام)</option>
+                            <option value="fast">مستعجل (48 ساعة)</option>
+                            <option value="express">عاجل (نفس اليوم)</option>
+                        </select>
+                    </div>
+                    
+                    <!-- 5. Priority -->
+                    <div class="form-group">
+                        <label for="priority">🎯 الأولوية:</label>
+                        <select id="priority" required>
+                            <option value="price">أرخص سعر</option>
+                            <option value="speed">أسرع توصيل</option>
+                            <option value="balanced">توازن بين السعر والسرعة</option>
+                            <option value="reliable">الأكثر موثوقية</option>
+                        </select>
+                    </div>
+                    
+                    <!-- 6. Extra Options -->
+                    <div class="form-group checkbox-group">
+                        <label>🔧 خيارات إضافية:</label>
+                        <div class="checkbox-options">
+                            <label>
+                                <input type="checkbox" id="tracking"> تتبع مباشر
+                            </label>
+                            <label>
+                                <input type="checkbox" id="cod"> الدفع عند الاستلام
+                            </label>
+                            <label>
+                                <input type="checkbox" id="doorDelivery"> توصيل حتى الباب
+                            </label>
+                            <label>
+                                <input type="checkbox" id="proof"> إثبات التسليم (توقيع/صورة)
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="compare-btn">
+                        <i class="fas fa-exchange-alt"></i> مقارنة الآن
+                    </button>
+                </form>
+            </section>
+            
+            <section class="results" id="resultsSection" style="display: none;">
+                <h2>نتائج المقارنة</h2>
+                <div class="results-summary">
+                    <p id="routeSummary"></p>
+                    <p id="packageSummary"></p>
+                </div>
+                <div class="sort-options">
+                    <span>ترتيب حسب:</span>
+                    <button id="sortPrice" class="sort-btn active">السعر</button>
+                    <button id="sortSpeed" class="sort-btn">السرعة</button>
+                    <button id="sortReliable" class="sort-btn">الموثوقية</button>
+                </div>
+                <div class="cards-container" id="resultsContainer">
+                    <!-- Results will be inserted here by JavaScript -->
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2023 نظام مقارنة شركات الشحن. البيانات المعروضة للتوضيح فقط.</p>
+        </footer>
+    </div>
+
+    <script src="js.js"></script>
+</body>
+</html>

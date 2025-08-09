@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const shippingCompanies = [
         {
             id: 1,
-            name: "بريد السعودية",
+            name: "EXO1",
             logo: "https://via.placeholder.com/50x50?text=SP",
             basePrice: 25,
             weightMultiplier: 1.2,
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 2,
-            name: "أرامكس",
+            name: "EXO2",
             logo: "https://via.placeholder.com/50x50?text=AR",
             basePrice: 35,
             weightMultiplier: 1.5,
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 3,
-            name: "DHL",
+            name: "EXO3",
             logo: "https://via.placeholder.com/50x50?text=DH",
             basePrice: 50,
             weightMultiplier: 1.8,
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 4,
-            name: "ناقل",
+            name: "EXO4",
             logo: "https://via.placeholder.com/50x50?text=NQ",
             basePrice: 20,
             weightMultiplier: 1.1,
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             id: 5,
-            name: "FedEx",
+            name: "EXO5",
             logo: "https://via.placeholder.com/50x50?text=FX",
             basePrice: 45,
             weightMultiplier: 1.6,
@@ -89,26 +89,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Distance between major Saudi cities (mock data in km)
     const cityDistances = {
-        "الرياض": {
-            "جدة": 950,
-            "الدمام": 395,
-            "مكة": 880,
-            "المدينة": 850,
-            "الخبر": 410
+        "medea": {
+            "q1": 950,
+            "q2": 395,
+            "q3": 880,
+            "q4": 850,
+            "q5": 410
         },
-        "جدة": {
-            "الرياض": 950,
-            "الدمام": 1345,
-            "مكة": 80,
-            "المدينة": 420,
-            "الخبر": 1360
+        "oran": {
+            "a1": 950,
+            "a2": 1345,
+            "a3": 80,
+            "a4": 420,
+            "a5": 1360
         },
-        "الدمام": {
-            "الرياض": 395,
-            "جدة": 1345,
-            "مكة": 1275,
-            "المدينة": 1245,
-            "الخبر": 25
+        "blida": {
+            "w1": 395,
+            "w2": 1345,
+            "w3": 1275,
+            "w4": 1245,
+            "w5": 25
         },
     };
     
@@ -490,4 +490,5 @@ document.addEventListener('DOMContentLoaded', function() {
         };
         return names[urgency] || urgency;
     }
+
 });

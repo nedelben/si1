@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <h3 class="card-title">${company.name}</h3>
                     <img src="${company.logo}" alt="${company.name} logo" class="card-logo">
                 </div>
-                <div class="card-price">${company.price.toFixed(2)} ريال</div>
+                <div class="card-price">${company.price.toFixed(2)} DZD</div>
                 <div class="card-delivery">
                     <i class="fas fa-truck"></i>
                     <span>مدة التوصيل: ${deliveryText}</span>
@@ -492,3 +492,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
